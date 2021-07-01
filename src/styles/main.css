@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Merriweather', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.header {
+    min-height: 56px;
+    width: 100%;
+    background: white;
+    transition: min-height 0.3s;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.header__inner {
+    width: 100%;
+}
+
+.header img {
+    margin: 15px;
+    width: 60px;
+    height: 80px;
+}
+
+#hamburger {
+    display: none;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav__list {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.nav__item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+    padding: 40px 10px 10px 10px;
+    text-transform: uppercase;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+
+/*
+ * Jumbotron
+ */
+
+.hero {
+    margin-top: 9px;
+    min-height: 400px;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    background-image: url("images/heros/heros-transparent-2-large.jpeg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.hero__inner {
+    max-width: 100%;
+}
+
+.hero__title {
+    padding-top: 150px;
+    color: rgb(252, 252, 252);
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.hero__tagline {
+    color: rgb(255, 255, 255);
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* katalog */
+
+.catalouge {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.catalouge__label {
+    text-align: center;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.catalouge__label::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* post */
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+/* post item */
+
+.post-item {
+    display: grid;
+    grid-template-rows: 0fr 1fr;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    column-gap: -5px;
+    margin: 0px 5px 0px 5px;
+    padding: 0px;
+}
+
+.content {
+    padding: 32px;
+}
+
+.post-item__content {
+    padding: 16px 32px 32px 32px;
+}
+
+.post-item__thumbnail {
+    width: 100%;
+    height: 180px;
+}
+
+.post-item__title {
+    font-weight: 500;
+    font-size: 19px;
+    transition: 0.3s opacity;
+}
+
+.post-item__title:hover {
+    opacity: 0.5;
+}
+
+.post-item__title a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+}
+
+.post-item__description {
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.5em;
+}
+
+.detail__label {
+    margin: 15px 0 0 30px;
+    font-weight: 500;
+}
+
+.detail-title {
+    text-align: left;
+}
+
+.detail-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.detail-image {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.detail__info {
+    padding: 20px;
+}
+
+.posts-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.detail__menu__label {
+    margin-top: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card {
+    width: 85%;
+    margin: 60px auto;
+}
+
+.food-list .drink-list {
+    text-align: left;
+}
+
+.menu-item__title {
+    text-align: center;
+    padding: 20px;
+}
+
+.categories {
+    position: relative;
+    top: 40px;
+}
+
+.categories-item {
+    display: inline;
+}
+
+.addReviewContainer {
+    margin: auto;
+}
+
+.addReviewCard {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.addReviewCard>form {
+    margin: 0 5px 0 5px;
+    padding-bottom: 10px;
+}
+
+.addReviewCard>form>img {
+    display: inline;
+    margin: 10px 0 -7px 5px;
+}
+
+.addReviewCard>form>input {
+    margin: 5px;
+}
+
+.addReviewCard>form>.reviewColumn {
+    width: 100%;
+    margin: 5px 0 0 0;
+    height: 25px;
+}
+
+.buttonContainer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.addReviewButton {
+    width: 80px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #0d6efd;
+    color: #ffff;
+    border-radius: 5px;
+    border: transparent;
+    font-size: 12px;
+}
+
+.reviewContainer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 2px;
+    margin: auto;
+    margin-top: 20px;
+    max-height: 250px;
+    overflow: scroll;
+}
+
+.review-item {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 1.5fr 0.5fr;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.review-item>p {
+    font-size: 12px;
+    margin: auto;
+    padding: 5px;
+}
+
+.reviewText {
+    background-color: rgb(216, 214, 211);
+    border-radius: 5px;
+}
+
+.reviewImage {
+    margin: auto;
+    border-radius: 50%;
+    width: 25px;
+    display: inline;
+}
+
+footer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+footer ul {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 1em;
+    font-size: 14px;
+}
+
+footer a {
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    padding: 7px 3px 7px 3px;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 10px;
+    color: rgb(5, 5, 5);
+}
+
+
+/* preloader */
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+
+/* end preloader */
+
+
+/*
+   Like
+*/
+
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width:0px) and (max-width: 540px) {
+    .hero {
+        background-image: url("images/heros/heros-transparent-2-small.jpeg");
+    }
+    .posts,
+    .posts-detail {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .post-item__description {
+        font-size: 11.5px;
+    }
+    .header__inner {
+        position: relative;
+        left: 50px;
+        top: 10px;
+    }
+    #drawer {
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        margin-top: 110px;
+        /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
+        transform: translate(-320px, 0);
+        transition: transform 0.3s ease-in-out;
+        background-color: white;
+        /* border-radius: 0 5% 5% 0; */
+        z-index: 1;
+    }
+    #drawer.open {
+        transform: translate(0, 0)
+    }
+    #drawer ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    #drawer li {
+        width: 100%;
+        border-bottom: 0.5px solid black;
+    }
+    #drawer a {
+        margin: auto;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+    }
+    #hamburger {
+        display: unset;
+        position: relative;
+        top: 100px;
+        font-size: 35px;
+        text-decoration: none;
+        padding: 2px 7px 2px 7px;
+        color: black;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+    }
+    .detail-card {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 0fr 1fr;
+    }
+    .detail-text {
+        text-align: center;
+    }
+    .categories {
+        position: unset;
+        margin-top: 10px;
+    }
+    .reviewContainer {
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 844px) {
+    .posts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .post-item__description {
+        font-size: 12px;
+    }
+    .nav__item {
+        margin-top: 50px;
+        margin-left: 0;
+        padding: 0;
+    }
+    .nav a {
+        font-size: 18px;
+    }
+    .detail-card {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 0fr 1fr;
+    }
+    .detail-text {
+        text-align: center;
+    }
+    .categories {
+        position: unset;
+        margin-top: 15px;
+    }
+    .reviewContainer {
+        overflow: scroll;
+    }
+}
